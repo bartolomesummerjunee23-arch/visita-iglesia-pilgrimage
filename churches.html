@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4b2c4d">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <title>Visita Iglesia 2026 • Pilgrimage Guide</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(#f7f3f8, #efe6f3);
+      color: #2c2c2c;
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    body.dark {
+      background: linear-gradient(#1a1a1a, #2c2c2c);
+      color: #f5f5f5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #4b2c4d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      animation: fadeDown 0.8s ease;
+    }
+
+    body.dark header {
+      background: #111;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress {
+      text-align: center;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #4b2c4d;
+    }
+
+    .bar {
+      height: 6px;
+      background: #ddd;
+      margin: 0 20px 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #7b4b7e, #c8a96a);
+      transition: width 0.4s ease;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .church {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: fadeUp 0.6s ease;
+    }
+
+    body.dark .church {
+      background: #2a2a2a;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .church:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .church img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      cursor: zoom-in;
+    }
+
+    /* Fullscreen Image Modal */
+    .img-modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .img-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .content {
+      padding: 20px;
+      display: none;
+      animation: expand 0.3s ease;
+    }
+
+    @keyframes expand {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .church.active .content { display: block; }
+
+    .church h2 {
+      margin: 0;
+      padding: 15px 20px;
+      background: #f0e7f3;
+      color: #4b2c4d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    body.dark .church h2 {
+      background: #333;
+      color: #f5f5f5;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .church.active .arrow { transform: rotate(90deg); }
+
+    .section {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .label { font-weight: bold; color: #4b2c4d; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: #7b4b7e;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #5e3661;
+      transform: scale(1.05);
+    }
+
+    input.check {
+      transform: scale(1.2);
+      accent-color: #7b4b7e;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Visita Iglesia 2026</h1>
+  <div style="font-size:0.9rem; opacity:0.9;">Pilgrimage Guide • Pray • Reflect • Complete the Journey</div>
+<button id="themeBtn" onclick="toggleTheme()" style="position:absolute; right:15px; top:15px; padding:6px 10px; border:none; border-radius:8px; cursor:pointer;">🌙</button>
+  <div style="margin-top:10px;">
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Archdiocesan+Shrine+of+Jesus+the+Way+Pasay&destination=San+Isidro+Labrador+Pasay&waypoints=National+Shrine+of+Our+Mother+of+Perpetual+Help+Baclaran|Our+Lady+of+Sorrows+Pasay|Our+Lady+of+Remedies+Malate|Our+Lady+of+the+Assumption+Malate&travelmode=driving" target="_blank">🌅 AM Route (1–6)</a>
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=San+Isidro+Labrador+Pasay&destination=Nuestra+Señora+de+Gracia+Makati&waypoints=St+Joseph+the+Worker+Makati|Holy+Family+Parish+Makati|St+Alphonsus+Magallanes|St+John+Bosco+Makati|Saint+Andrew+Bel-Air|Sts+Peter+and+Paul+Makati|Our+Lady+of+the+Abandoned+Mandaluyong&travelmode=driving" target="_blank">🌇 PM Route (7–14)</a>
+  </div>
+  <div style="font-size:0.8rem; margin-top:8px; opacity:0.9;">
+    Start 8:30 AM Mass at Church 1 • ~15–20 mins per church • Target finish by 3:00 PM
+  </div>
+  <div style="font-size:0.8rem; margin-top:6px; opacity:0.9;">
+    🕒 Suggested Flow:
+    8:30–9:15 (Church 1 Mass)
+    • 9:30–9:50 (Church 2)
+    • 10:00–10:20 (Church 3)
+    • 10:30–10:50 (Church 4)
+    • 11:00–11:20 (Church 5)
+    • 11:30–11:50 (Church 6)
+    • 12:00–12:20 (Church 7)
+    🍽 Lunch / Rest
+    • 1:30–1:50 (Church 8)
+    • 2:00–2:20 (Church 9)
+    • 2:30–2:50 (Church 10)
+    • 3:00–3:20 (Church 11–14 flexible end)
+  </div>
+  </div>
+  <div style="margin-top:10px;">
+    <button class="btn" onclick="startReminders()">🔔 Start Smart Reminders</button>
+  </div>
+</header>
+
+<div class="progress" id="progressText">0 / 14 Churches Visited</div>
+<div class="bar"><div class="bar-fill" id="progressBar"></div></div>
+
+<div class="container">
+
+  <!-- 1 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>1. Archdiocesan Shrine of Jesus the Way, the Truth, and the Life <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Archdiocesan_Shrine_of_Jesus_the_Way_the_Truth_and_the_Life.jpg" alt="Church 1" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Coral Way, Pasay City, Metro Manila</div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Coral+Way+Pasay+Church" target="_blank">Directions</a>
+      <a class="btn" href="prayers.html#station1">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>2. National Shrine of Our Mother of Perpetual Help <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Baclaran_Church_2023.jpg" alt="Church 2" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Redemptorist Rd, Baclaran, Parañaque</div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Baclaran+Church" target="_blank">Directions</a>
+      <a class="btn" href="prayers.html#station2">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>3. Our Lady of Sorrows Parish Church (Pasay) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Our_Lady_of_Sorrows_Parish_Pasay.jpg" alt="Church 3" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> 2130 F.B. Harrison St, Pasay</div>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Our+Lady+of+Sorrows+Pasay" target="_blank">Directions</a>
+      <a class="btn" href="prayers.html#station3">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>4. Our Lady of Remedies Parish (Malate Church) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Malate_Church_Manila.jpg" alt="Church 4" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Del Pilar St, Malate, Manila</div>
+      <a class="btn" href="prayers.html#station4">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>5. Our Lady of the Assumption Parish (Malate) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Our_Lady_of_the_Assumption_Church_Manila.jpg" alt="Church 5" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> 2200 Leveriza St, Malate</div>
+      <a class="btn" href="prayers.html#station5">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>6. San Isidro Labrador Parish Church (Pasay) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/San_Isidro_Labrador_Parish_Pasay.jpg" alt="Church 6" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> 1830 Taft Ave, Pasay</div>
+      <a class="btn" href="prayers.html#station6">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>7. St. Joseph the Worker Parish (Makati) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/St_Joseph_the_Worker_Parish_Makati.jpg" alt="Church 7" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> 4927 Enrique St, Makati</div>
+      <a class="btn" href="prayers.html#station7">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>8. Holy Family Parish (Makati) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Holy_Family_Parish_Makati.jpg" alt="Church 8" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> 2777 Faraday St, Makati</div>
+      <a class="btn" href="prayers.html#station8">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>9. St. Alphonsus Mary de Liguori Parish (Magallanes) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/St_Alphonsus_Mary_de_Liguori_Church_Magallanes.jpg" alt="Church 9" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Magallanes Village, Makati</div>
+      <a class="btn" href="prayers.html#station9">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>10. St. John Bosco Parish Church (Makati) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/St_John_Bosco_Parish_Makati.jpg" alt="Church 10" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Arnaiz Ave cor Amorsolo, Makati</div>
+      <a class="btn" href="prayers.html#station10">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>11. Saint Andrew the Apostle Parish (Bel-Air, Makati) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Saint_Andrew_the_Apostle_Parish_Makati.jpg" alt="Church 11" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Constellation St, Makati</div>
+      <a class="btn" href="prayers.html#station11">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>12. Sts. Peter and Paul Parish (Poblacion, Makati) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Sts_Peter_and_Paul_Parish_Makati.jpg" alt="Church 12" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> D.M. Rivera, Makati</div>
+      <a class="btn" href="prayers.html#station12">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>13. Parish of Our Lady of the Abandoned (Mandaluyong) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Our_Lady_of_the_Abandoned_Mandaluyong.jpg" alt="Church 13" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Hulo, Mandaluyong</div>
+      <a class="btn" href="prayers.html#station13">Go to Station Prayer</a>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="church" onclick="toggle(this)">
+    <div style="padding:10px 20px;">
+      <input type="checkbox" class="check" onclick="updateProgress(event)" /> Mark as Visited
+    </div>
+    <h2>14. Nuestra Señora de Gracia Parish Church (Guadalupe, Makati) <span class="arrow">▶</span></h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Nuestra_Senora_de_Gracia_Church_Makati.jpg" alt="Church 14" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.jpg';">
+    <div class="content">
+      <div class="section"><span class="label">Address:</span> Bernardino St, Makati</div>
+      <a class="btn" href="prayers.html#station14">Go to Station Prayer</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Image Modal -->
+<div class="img-modal" id="imgModal">
+  <span id="prevBtn" style="position:absolute;left:20px;font-size:30px;color:white;cursor:pointer;">❮</span>
+  <img id="modalImg">
+  <span id="nextBtn" style="position:absolute;right:20px;font-size:30px;color:white;cursor:pointer;">❯</span>
+</div>
+
+<script>
+function toggle(el) {
+  el.classList.toggle("active");
+}
+
+// Image Zoom + Swipe Gallery
+const images = Array.from(document.querySelectorAll('.church img'));
+let currentIndex = 0;
+
+images.forEach((img, index) => {
+  img.addEventListener('click', function(e) {
+    e.stopPropagation();
+    currentIndex = index;
+    openModal();
+  });
+});
+
+function openModal() {
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  modal.style.display = 'flex';
+  modalImg.src = images[currentIndex].src;
+}
+
+function closeModal() {
+  document.getElementById('imgModal').style.display = 'none';
+}
+
+// Buttons
+
+document.getElementById('prevBtn').onclick = function(e) {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  openModal();
+};
+
+document.getElementById('nextBtn').onclick = function(e) {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % images.length;
+  openModal();
+};
+
+// Swipe gestures
+let startX = 0;
+document.getElementById('imgModal').addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+document.getElementById('imgModal').addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    currentIndex = (currentIndex + 1) % images.length;
+    openModal();
+  } else if (endX - startX > 50) {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    openModal();
+  }
+});
+
+// Close on background tap
+
+document.getElementById('imgModal').addEventListener('click', function(e) {
+  if (e.target.id === 'imgModal') closeModal();
+});
+
+function toggle(el) {
+  el.classList.toggle("active");
+}
+
+function updateProgress(event) {
+  event.stopPropagation();
+  const checks = document.querySelectorAll('.check');
+  let count = 0;
+  checks.forEach(c => { if (c.checked) count++; });
+
+  document.getElementById('progressText').innerText = count + " / 14 Churches Visited";
+
+  const percent = (count / 14) * 100;
+  document.getElementById('progressBar').style.width = percent + "%";
+}
+
+// Save station + voice trigger
+const links = document.querySelectorAll('a[href^="prayers.html#"]');
+links.forEach(link => {
+  link.addEventListener('click', function() {
+    const id = this.getAttribute('href').split('#')[1];
+    localStorage.setItem('selectedStation', id);
+    localStorage.setItem('playVoice', 'true');
+  });
+});
+
+// Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+// Theme Toggle
+function updateThemeIcon() {
+  const btn = document.getElementById('themeBtn');
+  if (!btn) return;
+  btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  updateThemeIcon();
+}
+
+// Init theme (saved -> system -> time-based fallback)
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    if (savedTheme === 'dark') document.body.classList.add('dark');
+  } else {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark');
+    } else {
+      const hour = new Date().getHours();
+      if (hour >= 18 || hour < 6) document.body.classList.add('dark');
+    }
+  }
+  updateThemeIcon();
+}
+
+window.onload = function() {
+  initTheme();
+};
+
+// 🔔 SMART REMINDERS WITH TRAVEL ESTIMATES
+const routePlan = [
+  {name:"Church 1", stay:45, travel:10},
+  {name:"Church 2", stay:20, travel:8},
+  {name:"Church 3", stay:20, travel:8},
+  {name:"Church 4", stay:20, travel:6},
+  {name:"Church 5", stay:20, travel:6},
+  {name:"Church 6", stay:20, travel:10},
+  {name:"Church 7", stay:20, travel:15},
+  {name:"Church 8", stay:20, travel:8},
+  {name:"Church 9", stay:20, travel:8},
+  {name:"Church 10", stay:20, travel:8},
+  {name:"Church 11", stay:20, travel:5},
+  {name:"Church 12", stay:20, travel:5},
+  {name:"Church 13", stay:20, travel:8},
+  {name:"Church 14", stay:20, travel:0}
+];
+
+function notifyUser(message) {
+  if ("Notification" in window && Notification.permission === "granted") {
+    new Notification(message);
+  } else {
+    alert(message);
+  }
+}
+
+function startReminders() {
+  if ("Notification" in window && Notification.permission !== "granted") {
+    Notification.requestPermission();
+  }
+
+  let time = 0;
+
+  routePlan.forEach((stop, index) => {
+    time += stop.stay;
+
+    setTimeout(() => {
+      notifyUser(`⛪ Time to move to ${routePlan[index+1]?.name || 'final stop'} (Travel ~${stop.travel} mins)`);
+    }, time * 60000);
+
+    time += stop.travel;
+  });
+}
+
+</script>
+
+</body>
+</html>
