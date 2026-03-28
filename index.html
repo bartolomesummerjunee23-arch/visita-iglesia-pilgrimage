@@ -1,92 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Visita Iglesia 2026</title>
 
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background: linear-gradient(#f7f3f8, #efe6f3);
-      color: white;
-      text-align: center;
+      background: #f7f3f8;
+      color: #2c2c2c;
     }
 
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-      url('images/crown.jpg');
-
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/crown.jpg');
       background-size: cover;
       background-position: center;
-      animation: zoom 18s ease-in-out infinite alternate;
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+      overflow: hidden;
+      animation: zoomBg 18s ease-in-out infinite alternate;
     }
 
-    @keyframes zoom {
+    @keyframes zoomBg {
       from { background-size: 100%; }
       to { background-size: 110%; }
     }
 
-    h1 {
+    header h1 {
       font-size: 2.8rem;
+      margin-bottom: 10px;
       letter-spacing: 2px;
-      text-shadow: 0 0 10px gold;
-      margin-bottom: 10px;
+      text-shadow: 0 0 8px rgba(255,215,0,0.6), 0 0 18px rgba(255,215,0,0.4);
     }
 
-    .subtitle {
-      font-style: italic;
-      opacity: 0.9;
-      margin-bottom: 10px;
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      text-shadow: 0 0 6px rgba(0,0,0,0.6);
     }
 
-    .desc {
-      margin-bottom: 20px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+      background: #4b2c4d;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e6d6eb;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 12px 22px;
-      border-radius: 10px;
+      margin-top: 15px;
+      padding: 10px 18px;
+      border-radius: 8px;
       background: #7b4b7e;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.2s;
     }
 
     .btn:hover {
-      background: #5e3661;
-      transform: scale(1.05);
+      background: #a8894f;
     }
 
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>𝐕𝐈𝐒𝐈𝐓𝐀 𝐈𝐆𝐋𝐄𝐒𝐈𝐀 𝟐𝟎𝟐𝟔</h1>
+  <header>
+    <h1 style="font-size:2.8rem; letter-spacing:2px;">𝐕𝐈𝐒𝐈𝐓𝐀 𝐈𝐆𝐋𝐄𝐒𝐈𝐀 𝟐𝟎𝟐𝟔</h1>
+    <p style="font-style:italic; font-size:1.2rem; margin-top:10px;">
+      "𝐴 𝑆𝑎𝑐𝑟𝑒𝑑 𝑃𝑖𝑙𝑔𝑟𝑖𝑚𝑎𝑔𝑒 𝑜𝑓 𝑃𝑟𝑎𝑦𝑒𝑟 𝑎𝑛𝑑 𝑅𝑒𝑓𝑙𝑒𝑐𝑡𝑖𝑜𝑛"
+    </p>
+    <p style="margin-top:15px; font-size:1.05rem;">
+      Let us walk in faith, deepen our devotion, and reflect through prayer
+    </p>
+    <p style="margin-top:10px; font-weight:bold;">
+      Date: March 29, 2026
+    </p>
+  </header>
 
-  <div class="subtitle">
-    "A Sacred Pilgrimage of Prayer and Reflection"
+  <nav>
+    <a href="#about">About</a>
+    <a href="churches.html">Churches</a>
+    <a href="prayers.html">Prayers</a>
+    <a href="#guide">Guide</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="card" id="about">
+      <h2>What is Visita Iglesia?</h2>
+      <p>
+        Visita Iglesia is a Catholic tradition observed during Holy Week, where the faithful visit at least seven churches to pray the Stations of the Cross.
+        It is a time for reflection, repentance, and deepening one's faith.
+      </p>
+    </div>
+
+    <div class="card" id="guide">
+      <h2>Your Journey</h2>
+      <p>
+        Follow our curated route of churches for Visita Iglesia 2026. Each stop includes prayers, reflections, and sacred spaces for quiet devotion.
+      </p>
+      <a class="btn" href="churches.html">Start Visiting Churches</a>
+    </div>
+
+    <div class="card">
+      <h2>Prayers & Stations</h2>
+      <p>
+        Access the complete Opening Prayer, the 14 Stations of the Cross, and the Closing Prayer for your pilgrimage.
+      </p>
+      <a class="btn" href="prayers.html">View Prayers</a>
+    </div>
+
   </div>
 
-  <div class="desc">
-    March 29, 2026
-  </div>
-
-  <a class="btn" href="churches.html">Start Journey</a>
-  <a class="btn" href="prayers.html">View Prayers</a>
-</header>
+  <footer>
+    © 2026 Visita Iglesia | Built with devotion
+  </footer>
 
 </body>
 </html>
