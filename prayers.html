@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="hero">
-  <div class="title">✝️ Stations of the Cross</div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stations of the Cross</title>
 
   <!-- ✅ CONNECTED NAV -->
   <div style="margin-top:10px;">
@@ -13,18 +15,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stations of the Cross</title>
 
-<style>
-body{margin:0;font-family:Georgia,serif;background:#1b1020;color:white;}
-.hero{height:200px;display:flex;align-items:center;justify-content:center;background:#2a1830;}
-.title{font-size:1.8rem;color:#e6c76b;}
-.container{padding:20px;max-width:900px;margin:auto;}
-.station-btn{width:100%;text-align:left;background:#5a3a6a;border:none;padding:12px;margin-top:10px;border-radius:8px;color:white;cursor:pointer;}
-.station-content{display:none;padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;margin-top:5px;line-height:1.7;}
-.station-content.open{display:block;}
-.bottom-nav{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:#2a1830;padding:10px;}
-body{padding-bottom:70px;}
-</style>
-</head>
 
 <body>
 
@@ -34,300 +24,244 @@ body{padding-bottom:70px;}
 
 <p>
 In the name of the Father, and of the Son, and of the Holy Spirit. Amen.<br><br>
-My Lord Jesus Christ, Thou hast made this journey to die for me with love unutterable; and I have so many times ungratefully abandoned Thee. But now I love Thee with my whole heart; and because I love Thee, I am sincerely sorry for ever having offended Thee. Pardon me, my God, and permit me to accompany Thee on this journey. Thou goest to die for love of me; I wish also, my beloved Redeemer, to die for love of Thee. My Jesus, I will live and die always united to Thee.
+Lord Jesus Christ, you walked this path out of love for us. I am sorry for my sins and I want to follow you with a faithful heart. Help me remain with you always.
 </p>
 
-<!-- STATIONS -->
+<div class="card">
+<button onclick="toggle(this)">
+1. Jesus is condemned to death
+<span>Manila Cathedral</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
 
-<button class="station-btn" onclick="toggleStation(this)">1. Jesus is condemned to death</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how Jesus Christ, after being scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.<br><br>
-My adorable Jesus, it was not Pilate; no, it was my sins that condemned Thee to die. I beseech Thee, by the merits of this sorrowful journey, to assist my soul in its journey towards eternity. I love Thee, beloved Jesus; I love Thee more than myself. I repent with my whole heart of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<p><strong>V:</strong> Consider how Jesus was unjustly condemned despite His innocence.</p>
+
+<p><strong>R:</strong> My Jesus, it was my sins that condemned You. I repent with all my heart. Help me to love You always. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">2. Jesus carries His Cross</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how Jesus, in making this journey with the Cross on His shoulders, thought of us and offered for us to His Father the death He was about to suffer.<br><br>
-My most beloved Jesus, I embrace all the sufferings Thou hast destined for me until death. I beg Thee, by the merits of the pain Thou didst suffer in carrying Thy Cross, to give me the help necessary to carry mine with perfect patience and resignation. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+2. Jesus carries His Cross
+<span>San Agustin Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider how Jesus carried the Cross with love for us.</p>
+
+<p><strong>R:</strong> Give me strength to carry my crosses with patience and trust in You. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">3. Jesus falls the first time</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider this first fall of Jesus under His Cross. His flesh was torn by the scourges, His head crowned with thorns, and He had lost a great quantity of blood. He was so weakened that He could scarcely walk, and yet He had to carry this great load upon His shoulders.<br><br>
-My beloved Jesus, it is not the weight of the Cross but of my sins which has made Thee suffer so much. By the merits of this first fall, deliver me from the misfortune of falling into mortal sin. I love Thee, O my Jesus, with my whole heart; I repent of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+3. Jesus falls the first time
+<span>Quiapo Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus falling under the weight of the Cross.</p>
+
+<p><strong>R:</strong> Help me rise again whenever I fall into sin. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">4. Jesus meets His Mother</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how the Son met His Mother on His way to Calvary. Jesus and Mary looked at each other, and their looks became so many arrows to wound those hearts which loved each other so tenderly.<br><br>
-My most loving Jesus, by the pain Thou didst suffer in this meeting, grant me the grace to be truly devoted to Thy most holy Mother. And thou, my Queen, who wast overwhelmed with sorrow, obtain for me by thy intercession a continual and tender remembrance of the Passion of thy Son. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+4. Jesus meets His Mother
+<span>Binondo Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider the sorrowful meeting between Jesus and His Mother.</p>
+
+<p><strong>R:</strong> Grant me love and devotion to Mary. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">5. Simon helps Jesus carry the Cross</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how the Jews, seeing that Jesus was nearly dead, compelled Simon of Cyrene to help Him carry His Cross.<br><br>
-My most sweet Jesus, I will not refuse the Cross as Simon did: I accept it, I embrace it, I accept in particular the death Thou hast destined for me, with all the pains which may accompany it. I unite it to Thy death and offer it to Thee. Thou hast died for love of me; I will die for love of Thee. Help me by Thy grace.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+5. Simon helps Jesus carry the Cross
+<span>Baclaran Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider how Simon helped Jesus carry His Cross.</p>
+
+<p><strong>R:</strong> Help me accept and help others in their burdens. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">6. Veronica wipes the face of Jesus</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how Veronica wiped the face of Jesus.<br><br>
-My most beloved Jesus, Thy face was beautiful before, but in this journey it has lost all beauty. Restore my soul by Thy grace.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+6. Veronica wipes the face of Jesus
+<span>Malate Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Veronica’s act of compassion.</p>
+
+<p><strong>R:</strong> Help me to serve You in others with love. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">7. Jesus falls the second time</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider the second fall of Jesus.<br><br>
-Give me strength to persevere in grace.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+7. Jesus falls the second time
+<span>Paco Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus falling again in weakness.</p>
+
+<p><strong>R:</strong> Strengthen me to persevere in difficult times. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">8. Jesus consoles the women</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Weep not for Me, but for yourselves.<br><br>
-Grant me repentance.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+8. Jesus consoles the women
+<span>Guadalupe Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus comforting the women of Jerusalem.</p>
+
+<p><strong>R:</strong> Grant me true repentance and compassion. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">9. Jesus falls the third time</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider the third fall.<br><br>
-Strengthen me in weakness.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+9. Jesus falls the third time
+<span>Sta. Ana Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus falling again, exhausted.</p>
+
+<p><strong>R:</strong> Give me strength in my weaknesses. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">10. Jesus is stripped</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is stripped.<br><br>
-Detach me from earthly things.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+10. Jesus is stripped
+<span>San Sebastian Basilica</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus stripped of His garments.</p>
+
+<p><strong>R:</strong> Detach me from worldly attachments. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">11. Jesus is nailed</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is nailed.<br><br>
-Bind my heart to Thee.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+11. Jesus is nailed
+<span>Our Lady of Remedies</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus nailed to the Cross.</p>
+
+<p><strong>R:</strong> Bind my heart to You forever. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">12. Jesus dies</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus dies on the Cross.<br><br>
-I love Thee above all.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+12. Jesus dies on the Cross
+<span>Sacred Heart Parish</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+
+<p><strong>V:</strong> Consider Jesus dying for our salvation.</p>
+
+<p><strong>R:</strong> I love You above all things. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">13. Jesus is taken down</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is taken down.<br><br>
-Share in His sorrow.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+13. Jesus is taken down
+<span>Sta. Cruz Church</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+<p><strong>V:</strong> Consider Jesus in the arms of His Mother.</p>
+<p><strong>R:</strong> Let me share in Your sorrow and love. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+<p>(Our Father, Hail Mary, Glory be.)</p>
+</div>
 </div>
 
-<button class="station-btn" onclick="toggleStation(this)">14. Jesus is laid in the tomb</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is laid in the tomb.<br><br>
-Keep me united to Thee forever.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
+<div class="card">
+<button onclick="toggle(this)">
+14. Jesus is laid in the tomb
+<span>Sts. Peter and Paul Makati</span>
+</button>
+<div class="content">
+<p><strong>V:</strong> We adore You, O Christ, and we praise You.<br>
+<strong>R:</strong> Because by Your holy Cross You have redeemed the world.</p>
+<p><strong>V:</strong> Consider Jesus laid in the tomb.</p>
+<p><strong>R:</strong> May I rise with You to eternal life. I love You, Jesus, and I repent of my sins. Never permit me to be separated from You again.</p>
+
+<p>(Our Father, Hail Mary, Glory be.)</p>
 </div>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stations of the Cross</title>
-
-<style>
-body{margin:0;font-family:Georgia,serif;background:#1b1020;color:white;}
-.hero{height:200px;display:flex;align-items:center;justify-content:center;background:#2a1830;}
-.title{font-size:1.8rem;color:#e6c76b;}
-.container{padding:20px;max-width:900px;margin:auto;}
-.station-btn{width:100%;text-align:left;background:#5a3a6a;border:none;padding:12px;margin-top:10px;border-radius:8px;color:white;cursor:pointer;}
-.station-content{display:none;padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;margin-top:5px;line-height:1.7;}
-.station-content.open{display:block;}
-.bottom-nav{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:#2a1830;padding:10px;}
-body{padding-bottom:70px;}
-</style>
-</head>
-
-<body>
-
-<header class="hero"><div class="title">✝️ Stations of the Cross</div></header>
-
-<div class="container">
-
-<p>
-In the name of the Father, and of the Son, and of the Holy Spirit. Amen.<br><br>
-My Lord Jesus Christ, Thou hast made this journey to die for me with love unutterable; and I have so many times ungratefully abandoned Thee. But now I love Thee with my whole heart; and because I love Thee, I am sincerely sorry for ever having offended Thee. Pardon me, my God, and permit me to accompany Thee on this journey. Thou goest to die for love of me; I wish also, my beloved Redeemer, to die for love of Thee. My Jesus, I will live and die always united to Thee.
-</p>
-
-<!-- STATIONS -->
-
-<button class="station-btn" onclick="toggleStation(this)">1. Jesus is condemned to death</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how Jesus Christ, after being scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.<br><br>
-My adorable Jesus, it was not Pilate; no, it was my sins that condemned Thee to die. I beseech Thee, by the merits of this sorrowful journey, to assist my soul in its journey towards eternity. I love Thee, beloved Jesus; I love Thee more than myself. I repent with my whole heart of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">2. Jesus carries His Cross</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how Jesus, in making this journey with the Cross on His shoulders, thought of us and offered for us to His Father the death He was about to suffer.<br><br>
-My most beloved Jesus, I embrace all the sufferings Thou hast destined for me until death. I beg Thee, by the merits of the pain Thou didst suffer in carrying Thy Cross, to give me the help necessary to carry mine with perfect patience and resignation. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">3. Jesus falls the first time</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider this first fall of Jesus under His Cross. His flesh was torn by the scourges, His head crowned with thorns, and He had lost a great quantity of blood. He was so weakened that He could scarcely walk, and yet He had to carry this great load upon His shoulders.<br><br>
-My beloved Jesus, it is not the weight of the Cross but of my sins which has made Thee suffer so much. By the merits of this first fall, deliver me from the misfortune of falling into mortal sin. I love Thee, O my Jesus, with my whole heart; I repent of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">4. Jesus meets His Mother</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how the Son met His Mother on His way to Calvary. Jesus and Mary looked at each other, and their looks became so many arrows to wound those hearts which loved each other so tenderly.<br><br>
-My most loving Jesus, by the pain Thou didst suffer in this meeting, grant me the grace to be truly devoted to Thy most holy Mother. And thou, my Queen, who wast overwhelmed with sorrow, obtain for me by thy intercession a continual and tender remembrance of the Passion of thy Son. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">5. Simon helps Jesus carry the Cross</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how the Jews, seeing that Jesus was nearly dead, compelled Simon of Cyrene to help Him carry His Cross.<br><br>
-My most sweet Jesus, I will not refuse the Cross as Simon did: I accept it, I embrace it, I accept in particular the death Thou hast destined for me, with all the pains which may accompany it. I unite it to Thy death and offer it to Thee. Thou hast died for love of me; I will die for love of Thee. Help me by Thy grace.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">6. Veronica wipes the face of Jesus</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider how Veronica wiped the face of Jesus.<br><br>
-My most beloved Jesus, Thy face was beautiful before, but in this journey it has lost all beauty. Restore my soul by Thy grace.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">7. Jesus falls the second time</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider the second fall of Jesus.<br><br>
-Give me strength to persevere in grace.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">8. Jesus consoles the women</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Weep not for Me, but for yourselves.<br><br>
-Grant me repentance.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">9. Jesus falls the third time</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Consider the third fall.<br><br>
-Strengthen me in weakness.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">10. Jesus is stripped</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is stripped.<br><br>
-Detach me from earthly things.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">11. Jesus is nailed</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is nailed.<br><br>
-Bind my heart to Thee.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">12. Jesus dies</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus dies on the Cross.<br><br>
-I love Thee above all.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">13. Jesus is taken down</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is taken down.<br><br>
-Share in His sorrow.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
-</div>
-
-<button class="station-btn" onclick="toggleStation(this)">14. Jesus is laid in the tomb</button>
-<div class="station-content">
-We adore Thee, O Christ, and we bless Thee.<br>
-Because by Thy holy Cross Thou hast redeemed the world.<br><br>
-Jesus is laid in the tomb.<br><br>
-Keep me united to Thee forever.<br><br>
-Our Father, Hail Mary, Glory be to the Father.
 </div>
 
 <p><br><strong>Closing Prayer</strong><br>
-We beseech Thee, O Lord Jesus Christ, that by Thy most holy Passion and death, Thou wouldst grant us Thy grace, that it may be to us a perpetual remedy against all sin, the increase of grace, and the attainment of everlasting glory.<br><br>
-Grant, we beseech Thee, O Lord, that we, Thy servants, may enjoy perpetual health of mind and body; and by the glorious intercession of the Blessed Virgin Mary, ever Virgin, may be delivered from present sorrow and attain to eternal joy.<br><br>
-Through Christ our Lord. Amen.
+Lord Jesus Christ, by Your Passion and death, grant us grace, forgiveness, and eternal life. Amen.
 </p>
 
 </div>
@@ -352,15 +286,3 @@ btn.nextElementSibling.classList.toggle("open");
 <script>
 function toggleStation(btn){
 btn.nextElementSibling.classList.toggle("open");
-}
-</script>
-
-<div class="bottom-nav">
-  <a href="index.html">🏠 Home</a>
-  <a href="churches.html">⛪ Churches</a>
-  <a href="prayers.html">🙏 Prayers</a>
-</div>
-
-
-</body>
-</html>
