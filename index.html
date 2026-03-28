@@ -1,39 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visita Iglesia 2026</title>
+
+<style>
+body {
+  margin:0;
+  font-family:Georgia, serif;
+  background:linear-gradient(#f7f3f8,#efe6f3);
+}
+
+/* HEADER */
+header {
+  background:#4b2c4d;
+  color:white;
+  text-align:center;
+  padding:20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+h1 { margin:0; }
+
+/* BUTTONS */
+.btn {
+  display:inline-block;
+  margin:6px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#7b4b7e;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#a678a8;
+  transform:scale(1.05);
+}
+
+/* CONTAINER */
+.container {
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card {
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:15px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* TIMELINE */
+.timeline {
+  font-size:0.9rem;
+  opacity:0.8;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+
+/* DARK MODE */
+.dark {
+  background:#1e1e1e;
+  color:white;
+}
+
+.dark .card {
+  background:#2c2c2c;
+}
+
+.dark header {
+  background:#000;
+}
+
+</style>
+</head>
+
+<body>
+
 <header>
   <h1>Visita Iglesia 2026</h1>
   <div style="font-size:0.9rem; opacity:0.9;">
     Pilgrimage Guide • Pray • Reflect • Complete the Journey
   </div>
 
-  <!-- ✅ NEW NAV (connects to Page 1 + Prayers) -->
   <div style="margin-top:12px;">
     <a class="btn" href="index.html">🏠 Home</a>
+    <a class="btn" href="churches.html">⛪ Churches</a>
     <a class="btn" href="prayers.html">🙏 Prayers</a>
   </div>
 
-  <!-- Existing Route Buttons -->
-  <div style="margin-top:10px;">
-    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Archdiocesan+Shrine+of+Jesus+the+Way+Pasay&destination=San+Isidro+Labrador+Pasay&waypoints=National+Shrine+of+Our+Mother+of+Perpetual+Help+Baclaran|Our+Lady+of+Sorrows+Pasay|Our+Lady+of+Remedies+Malate|Our+Lady+of+the+Assumption+Malate&travelmode=driving" target="_blank">🌅 AM Route (1–6)</a>
-
-    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=San+Isidro+Labrador+Pasay&destination=Nuestra+Señora+de+Gracia+Makati&waypoints=St+Joseph+the+Worker+Makati|Holy+Family+Parish+Makati|St+Alphonsus+Magallanes|St+John+Bosco+Makati|Saint+Andrew+Bel-Air|Sts+Peter+and+Paul+Makati|Our+Lady+of+the+Abandoned+Mandaluyong&travelmode=driving" target="_blank">🌇 PM Route (7–14)</a>
-  </div>
-
-  <!-- Timeline -->
-  <div style="font-size:0.8rem; margin-top:8px; opacity:0.9;">
-    Start 8:30 AM Mass at Church 1 • ~15–20 mins per church • Target finish by 3:00 PM
-  </div>
-
-  <div style="margin-top:10px;">
-    <button class="btn" onclick="startReminders()">🔔 Start Smart Reminders</button>
-  </div>
-
-  <!-- Theme Toggle -->
-  <button id="themeBtn" onclick="toggleTheme()" 
-    style="position:absolute; right:15px; top:15px; padding:6px 10px; border:none; border-radius:8px; cursor:pointer;">
-    🌙
+  <button onclick="toggleTheme()" 
+  style="position:absolute; right:15px; top:15px; border:none; border-radius:8px; padding:6px 10px;">
+  🌙
   </button>
 </header>
 
-<footer style="text-align:center; padding:20px; color:#777;">
-  <a href="index.html" class="btn">⬅ Back to Home</a>
-  <p style="margin-top:10px;">© 2026 Visita Iglesia</p>
+<div class="container">
+
+<div class="card">
+<h2>🕊️ Welcome</h2>
+<p>
+Embark on your Visita Iglesia journey this Holy Week.  
+Visit 14 churches, reflect on the Stations of the Cross, and deepen your faith.
+</p>
+</div>
+
+<div class="card">
+<h2>🗺️ Routes</h2>
+
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Archdiocesan+Shrine+of+Jesus+the+Way+Pasay&destination=San+Isidro+Labrador+Pasay&waypoints=National+Shrine+of+Our+Mother+of+Perpetual+Help+Baclaran|Our+Lady+of+Sorrows+Pasay|Our+Lady+of+Remedies+Malate|Our+Lady+of+the+Assumption+Malate&travelmode=driving" target="_blank">
+🌅 AM Route (1–6)
+</a>
+
+<a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=San+Isidro+Labrador+Pasay&destination=Nuestra+Señora+de+Gracia+Makati&waypoints=St+Joseph+the+Worker+Makati|Holy+Family+Parish+Makati|St+Alphonsus+Magallanes|St+John+Bosco+Makati|Saint+Andrew+Bel-Air|Sts+Peter+and+Paul+Makati|Our+Lady+of+the+Abandoned+Mandaluyong&travelmode=driving" target="_blank">
+🌇 PM Route (7–14)
+</a>
+
+<p class="timeline">
+Start 8:30 AM • 15–20 mins per church • Target finish 3:00 PM
+</p>
+</div>
+
+<div class="card">
+<h2>🔔 Smart Reminder</h2>
+<button class="btn" onclick="startReminders()">Start Reminder</button>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Visita Iglesia</p>
 </footer>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+}
+
+function startReminders(){
+  alert("Reminder started! Stay on schedule 🙏");
+}
+</script>
+
+</body>
+</html>
