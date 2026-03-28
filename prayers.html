@@ -3,168 +3,354 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Churches | Visita Iglesia 2026</title>
+<title>Stations of the Cross</title>
 
 <style>
-:root{--primary:#7b4b7e;--accent:#d8a7ff;--card:rgba(35,16,41,0.75);} 
-body{margin:0;font-family:Georgia,serif;background:linear-gradient(rgba(20,10,26,0.75), rgba(46,22,51,0.9)),url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;color:white;} 
-header{text-align:center;padding:50px 20px 40px;background:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;} 
-.container{max-width:900px;margin:auto;padding:20px;} 
-.card{background:var(--card);backdrop-filter:blur(10px);border-radius:18px;margin-bottom:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.6);} 
-.card img{width:100%;height:230px;object-fit:cover;} 
-.content{padding:18px;} h3{margin:0 0 10px;} 
-.toggle-btn{background:var(--primary);border:none;color:white;padding:10px 14px;border-radius:10px;cursor:pointer;} 
-.details{max-height:0;overflow:hidden;transition:0.4s;opacity:0;} 
-.details.open{max-height:800px;opacity:1;margin-top:12px;} 
-.section-title{color:var(--accent);margin-top:10px;font-size:0.85rem;} 
-.small{font-size:0.85rem;opacity:0.9;} 
-.bottom-nav{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:rgba(35,16,41,0.9);padding:10px 0;} 
-.bottom-nav a{color:white;text-decoration:none;font-size:0.75rem;text-align:center;} body{padding-bottom:70px;}
+body{margin:0;font-family:Georgia,serif;background:#1b1020;color:white;}
+.hero{height:200px;display:flex;align-items:center;justify-content:center;background:#2a1830;}
+.title{font-size:1.8rem;color:#e6c76b;}
+.container{padding:20px;max-width:900px;margin:auto;}
+.station-btn{width:100%;text-align:left;background:#5a3a6a;border:none;padding:12px;margin-top:10px;border-radius:8px;color:white;cursor:pointer;}
+.station-content{display:none;padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;margin-top:5px;line-height:1.7;}
+.station-content.open{display:block;}
+.bottom-nav{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:#2a1830;padding:10px;}
+body{padding-bottom:70px;}
 </style>
 </head>
+
 <body>
-<header><h1>Visita Iglesia 2026</h1><p>Tap “View Details”</p></header>
+
+<header class="hero"><div class="title">✝️ Stations of the Cross</div></header>
 
 <div class="container">
 
-<!-- LOOP OF 14 CHURCHES -->
+<p>
+In the name of the Father, and of the Son, and of the Holy Spirit. Amen.<br><br>
+My Lord Jesus Christ, Thou hast made this journey to die for me with love unutterable; and I have so many times ungratefully abandoned Thee. But now I love Thee with my whole heart; and because I love Thee, I am sincerely sorry for ever having offended Thee. Pardon me, my God, and permit me to accompany Thee on this journey. Thou goest to die for love of me; I wish also, my beloved Redeemer, to die for love of Thee. My Jesus, I will live and die always united to Thee.
+</p>
 
-<!-- 1 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Archdiocesan_Shrine_of_Jesus_the_Way_the_Truth_and_the_Life.jpg"><div class="content"><h3>1. Archdiocesan Shrine of Jesus the Way, the Truth, and the Life</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Coral Way, Pasay City</div>
-<div class="section-title">⛪ Mass (Mar 29)</div><div class="small">8:30 AM (Start here), 10:00 AM</div>
-<div class="section-title">📖 History</div><div class="small">A modern diocesan shrine serving the Bay Area community, known for large gatherings and accessibility.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Baclaran: 10 mins (₱80–120 Grab), jeep + MOA routes, parking available</div>
-<div class="section-title">🍽 Nearby</div><div class="small">SM Mall of Asia, Starbucks, Jollibee, CBTL, Vikings, 7-Eleven</div>
-</div></div></div>
+<!-- STATIONS -->
 
-<!-- 2 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Baclaran_Church_2023.jpg"><div class="content"><h3>2. National Shrine of Our Mother of Perpetual Help</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Redemptorist Rd, Baclaran, Parañaque</div>
-<div class="section-title">⛪ Mass</div><div class="small">6AM, 8AM, 10AM, 12NN, 4PM, 6PM</div>
-<div class="section-title">📖 History</div><div class="small">Established in 1948, Baclaran Church is among the most visited Marian shrines in Asia.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Our Lady of Sorrows: 8 mins (₱70–100), jeep + LRT nearby</div>
-<div class="section-title">🍽 Nearby</div><div class="small">McDo, Mang Inasal, Jollibee, Baclaran Market, Dunkin, 7-Eleven</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">1. Jesus is condemned to death</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how Jesus Christ, after being scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.<br><br>
+My adorable Jesus, it was not Pilate; no, it was my sins that condemned Thee to die. I beseech Thee, by the merits of this sorrowful journey, to assist my soul in its journey towards eternity. I love Thee, beloved Jesus; I love Thee more than myself. I repent with my whole heart of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 3 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Our_Lady_of_Sorrows_Parish_Pasay.jpg"><div class="content"><h3>3. Our Lady of Sorrows Parish</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">F.B. Harrison St, Pasay City</div>
-<div class="section-title">⛪ Mass</div><div class="small">7AM, 9AM, 5PM</div>
-<div class="section-title">📖 History</div><div class="small">A long-standing parish serving Pasay residents with a strong Marian devotion.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Malate Church: 10 mins (₱90–120)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Savemore, Chowking, Jollibee, Andok’s, 7-Eleven, local cafés</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">2. Jesus carries His Cross</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how Jesus, in making this journey with the Cross on His shoulders, thought of us and offered for us to His Father the death He was about to suffer.<br><br>
+My most beloved Jesus, I embrace all the sufferings Thou hast destined for me until death. I beg Thee, by the merits of the pain Thou didst suffer in carrying Thy Cross, to give me the help necessary to carry mine with perfect patience and resignation. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 4 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Malate_Church_Manila.jpg"><div class="content"><h3>4. Our Lady of Remedies Parish (Malate Church)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Del Pilar St, Malate, Manila</div>
-<div class="section-title">⛪ Mass</div><div class="small">8AM, 10AM, 6PM</div>
-<div class="section-title">📖 History</div><div class="small">A historic Baroque church dating back to Spanish era, rebuilt after WWII.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Assumption Parish: 5 mins (₱60–80)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Cafe Adriatico, Starbucks, Robinsons Place Manila, McDo, 7-Eleven, Aristocrat</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">3. Jesus falls the first time</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider this first fall of Jesus under His Cross. His flesh was torn by the scourges, His head crowned with thorns, and He had lost a great quantity of blood. He was so weakened that He could scarcely walk, and yet He had to carry this great load upon His shoulders.<br><br>
+My beloved Jesus, it is not the weight of the Cross but of my sins which has made Thee suffer so much. By the merits of this first fall, deliver me from the misfortune of falling into mortal sin. I love Thee, O my Jesus, with my whole heart; I repent of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 5 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Our_Lady_of_the_Assumption_Church_Manila.jpg"><div class="content"><h3>5. Our Lady of the Assumption Parish</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Leveriza St, Malate, Manila</div>
-<div class="section-title">⛪ Mass</div><div class="small">7AM, 9AM</div>
-<div class="section-title">📖 History</div><div class="small">A quieter parish in Malate known for community devotion.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ San Isidro Labrador: 10 mins</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Local eateries, 7-Eleven, cafés, small bakeries</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">4. Jesus meets His Mother</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how the Son met His Mother on His way to Calvary. Jesus and Mary looked at each other, and their looks became so many arrows to wound those hearts which loved each other so tenderly.<br><br>
+My most loving Jesus, by the pain Thou didst suffer in this meeting, grant me the grace to be truly devoted to Thy most holy Mother. And thou, my Queen, who wast overwhelmed with sorrow, obtain for me by thy intercession a continual and tender remembrance of the Passion of thy Son. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 6 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/San_Isidro_Labrador_Parish_Pasay.jpg"><div class="content"><h3>6. San Isidro Labrador Parish</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Taft Ave, Pasay City</div>
-<div class="section-title">⛪ Mass</div><div class="small">6AM, 8AM</div>
-<div class="section-title">📖 History</div><div class="small">A parish along Taft serving commuters and locals.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ St Joseph Makati: 15 mins (₱120–150)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">McDo, KFC, Chowking, LRT Taft area, 7-Eleven</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">5. Simon helps Jesus carry the Cross</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how the Jews, seeing that Jesus was nearly dead, compelled Simon of Cyrene to help Him carry His Cross.<br><br>
+My most sweet Jesus, I will not refuse the Cross as Simon did: I accept it, I embrace it, I accept in particular the death Thou hast destined for me, with all the pains which may accompany it. I unite it to Thy death and offer it to Thee. Thou hast died for love of me; I will die for love of Thee. Help me by Thy grace.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 7 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/St_Joseph_the_Worker_Parish_Makati.jpg"><div class="content"><h3>7. St. Joseph the Worker Parish (Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Enrique St, Pio del Pilar, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 9:00 AM, 5:30 PM</div>
-<div class="section-title">📖 History</div><div class="small">A central Makati parish serving residential and business districts.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Holy Family: 6 mins (₱60–90), trike/jeep/Grab</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Little Tokyo, KFC, Jollibee, 7-Eleven, WalterMart Makati, cafés</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">6. Veronica wipes the face of Jesus</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how Veronica wiped the face of Jesus.<br><br>
+My most beloved Jesus, Thy face was beautiful before, but in this journey it has lost all beauty. Restore my soul by Thy grace.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 8 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Holy_Family_Parish_Makati.jpg"><div class="content"><h3>8. Holy Family Parish (San Isidro, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Faraday St, San Isidro, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">6:30 AM, 8:00 AM, 5:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">Community parish known for family-centered ministries.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ St. Alphonsus (Magallanes): 8 mins (₱80–120)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Carinderias, Jollibee, Chowking, 7-Eleven, local cafés, bakeries</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">7. Jesus falls the second time</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider the second fall of Jesus.<br><br>
+Give me strength to persevere in grace.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 9 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/St_Alphonsus_Mary_de_Liguori_Church_Magallanes.jpg"><div class="content"><h3>9. St. Alphonsus Mary de Liguori Parish (Magallanes)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Magallanes Village, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 12:00 NN, 6:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">A serene chapel complex serving nearby villages and offices.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Don Bosco: 7 mins (₱70–100)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Magallanes Square, Starbucks, McDo, KFC, 7-Eleven, cafés</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">8. Jesus consoles the women</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Weep not for Me, but for yourselves.<br><br>
+Grant me repentance.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 10 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/St_John_Bosco_Parish_Makati.jpg"><div class="content"><h3>10. St. John Bosco Parish (Don Bosco, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Arnaiz Ave cor. Amorsolo St, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">7:30 AM, 10:00 AM, 6:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">A popular parish near CBD, known for youth and Salesian community.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ St. Andrew: 10 mins (₱90–120)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Greenbelt, Glorietta, McDo, Jollibee, Starbucks, 7-Eleven</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">9. Jesus falls the third time</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider the third fall.<br><br>
+Strengthen me in weakness.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 11 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Saint_Andrew_the_Apostle_Parish_Makati.jpg"><div class="content"><h3>11. Saint Andrew the Apostle Parish (Bel-Air, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Constellation St cor. Nicanor Garcia, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">8:00 AM, 10:00 AM, 6:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">Modern parish serving Bel-Air and nearby communities.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Sts. Peter & Paul: 8 mins (₱80–110)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Salcedo area cafés, Starbucks, McDo, 7-Eleven, restaurants</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">10. Jesus is stripped</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is stripped.<br><br>
+Detach me from earthly things.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 12 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Sts_Peter_and_Paul_Parish_Makati.jpg"><div class="content"><h3>12. Saints Peter and Paul Parish (Poblacion, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">D.M. Rivera St, Poblacion, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 9:00 AM, 5:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">One of Makati’s oldest parishes with strong community roots.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Our Lady of the Abandoned: 10 mins (₱90–120)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Poblacion restos, cafes, convenience stores, eateries</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">11. Jesus is nailed</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is nailed.<br><br>
+Bind my heart to Thee.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 13 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Our_Lady_of_the_Abandoned_Mandaluyong.jpg"><div class="content"><h3>13. Parish of Our Lady of the Abandoned (Mandaluyong)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Hulo, Mandaluyong City</div>
-<div class="section-title">⛪ Mass</div><div class="small">6:30 AM, 8:00 AM, 5:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">A well-known Marian parish with deep local devotion.</div>
-<div class="section-title">🚗 Travel</div><div class="small">→ Nuestra Señora de Gracia: 12 mins (₱100–130)</div>
-<div class="section-title">🍽 Nearby</div><div class="small">SM Light Mall, Jollibee, McDo, 7-Eleven, cafes, eateries</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">12. Jesus dies</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus dies on the Cross.<br><br>
+I love Thee above all.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
 
-<!-- 14 -->
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Nuestra_Senora_de_Gracia_Church_Makati.jpg"><div class="content"><h3>14. Nuestra Señora de Gracia Parish (Guadalupe Viejo, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
-<div class="section-title">📍 Address</div><div class="small">Bernardino St, Guadalupe Viejo, Makati</div>
-<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 9:00 AM, 6:00 PM</div>
-<div class="section-title">📖 History</div><div class="small">A historic Spanish-era church founded in the 1600s, one of Makati’s oldest landmarks.</div>
-<div class="section-title">🚗 Travel</div><div class="small">Final stop</div>
-<div class="section-title">🍽 Nearby</div><div class="small">Guadalupe Mall, Jollibee, McDo, street food, 7-Eleven, cafes</div>
-</div></div></div>
+<button class="station-btn" onclick="toggleStation(this)">13. Jesus is taken down</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is taken down.<br><br>
+Share in His sorrow.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">14. Jesus is laid in the tomb</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is laid in the tomb.<br><br>
+Keep me united to Thee forever.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stations of the Cross</title>
+
+<style>
+body{margin:0;font-family:Georgia,serif;background:#1b1020;color:white;}
+.hero{height:200px;display:flex;align-items:center;justify-content:center;background:#2a1830;}
+.title{font-size:1.8rem;color:#e6c76b;}
+.container{padding:20px;max-width:900px;margin:auto;}
+.station-btn{width:100%;text-align:left;background:#5a3a6a;border:none;padding:12px;margin-top:10px;border-radius:8px;color:white;cursor:pointer;}
+.station-content{display:none;padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;margin-top:5px;line-height:1.7;}
+.station-content.open{display:block;}
+.bottom-nav{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:#2a1830;padding:10px;}
+body{padding-bottom:70px;}
+</style>
+</head>
+
+<body>
+
+<header class="hero"><div class="title">✝️ Stations of the Cross</div></header>
+
+<div class="container">
+
+<p>
+In the name of the Father, and of the Son, and of the Holy Spirit. Amen.<br><br>
+My Lord Jesus Christ, Thou hast made this journey to die for me with love unutterable; and I have so many times ungratefully abandoned Thee. But now I love Thee with my whole heart; and because I love Thee, I am sincerely sorry for ever having offended Thee. Pardon me, my God, and permit me to accompany Thee on this journey. Thou goest to die for love of me; I wish also, my beloved Redeemer, to die for love of Thee. My Jesus, I will live and die always united to Thee.
+</p>
+
+<!-- STATIONS -->
+
+<button class="station-btn" onclick="toggleStation(this)">1. Jesus is condemned to death</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how Jesus Christ, after being scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross.<br><br>
+My adorable Jesus, it was not Pilate; no, it was my sins that condemned Thee to die. I beseech Thee, by the merits of this sorrowful journey, to assist my soul in its journey towards eternity. I love Thee, beloved Jesus; I love Thee more than myself. I repent with my whole heart of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">2. Jesus carries His Cross</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how Jesus, in making this journey with the Cross on His shoulders, thought of us and offered for us to His Father the death He was about to suffer.<br><br>
+My most beloved Jesus, I embrace all the sufferings Thou hast destined for me until death. I beg Thee, by the merits of the pain Thou didst suffer in carrying Thy Cross, to give me the help necessary to carry mine with perfect patience and resignation. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">3. Jesus falls the first time</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider this first fall of Jesus under His Cross. His flesh was torn by the scourges, His head crowned with thorns, and He had lost a great quantity of blood. He was so weakened that He could scarcely walk, and yet He had to carry this great load upon His shoulders.<br><br>
+My beloved Jesus, it is not the weight of the Cross but of my sins which has made Thee suffer so much. By the merits of this first fall, deliver me from the misfortune of falling into mortal sin. I love Thee, O my Jesus, with my whole heart; I repent of having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">4. Jesus meets His Mother</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how the Son met His Mother on His way to Calvary. Jesus and Mary looked at each other, and their looks became so many arrows to wound those hearts which loved each other so tenderly.<br><br>
+My most loving Jesus, by the pain Thou didst suffer in this meeting, grant me the grace to be truly devoted to Thy most holy Mother. And thou, my Queen, who wast overwhelmed with sorrow, obtain for me by thy intercession a continual and tender remembrance of the Passion of thy Son. I love Thee, Jesus, my love; I repent of ever having offended Thee. Never permit me to separate myself from Thee again. Grant that I may love Thee always; and then do with me what Thou wilt.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">5. Simon helps Jesus carry the Cross</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how the Jews, seeing that Jesus was nearly dead, compelled Simon of Cyrene to help Him carry His Cross.<br><br>
+My most sweet Jesus, I will not refuse the Cross as Simon did: I accept it, I embrace it, I accept in particular the death Thou hast destined for me, with all the pains which may accompany it. I unite it to Thy death and offer it to Thee. Thou hast died for love of me; I will die for love of Thee. Help me by Thy grace.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">6. Veronica wipes the face of Jesus</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider how Veronica wiped the face of Jesus.<br><br>
+My most beloved Jesus, Thy face was beautiful before, but in this journey it has lost all beauty. Restore my soul by Thy grace.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">7. Jesus falls the second time</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider the second fall of Jesus.<br><br>
+Give me strength to persevere in grace.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">8. Jesus consoles the women</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Weep not for Me, but for yourselves.<br><br>
+Grant me repentance.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">9. Jesus falls the third time</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Consider the third fall.<br><br>
+Strengthen me in weakness.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">10. Jesus is stripped</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is stripped.<br><br>
+Detach me from earthly things.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">11. Jesus is nailed</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is nailed.<br><br>
+Bind my heart to Thee.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">12. Jesus dies</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus dies on the Cross.<br><br>
+I love Thee above all.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">13. Jesus is taken down</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is taken down.<br><br>
+Share in His sorrow.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<button class="station-btn" onclick="toggleStation(this)">14. Jesus is laid in the tomb</button>
+<div class="station-content">
+We adore Thee, O Christ, and we bless Thee.<br>
+Because by Thy holy Cross Thou hast redeemed the world.<br><br>
+Jesus is laid in the tomb.<br><br>
+Keep me united to Thee forever.<br><br>
+Our Father, Hail Mary, Glory be to the Father.
+</div>
+
+<p><br><strong>Closing Prayer</strong><br>
+We beseech Thee, O Lord Jesus Christ, that by Thy most holy Passion and death, Thou wouldst grant us Thy grace, that it may be to us a perpetual remedy against all sin, the increase of grace, and the attainment of everlasting glory.<br><br>
+Grant, we beseech Thee, O Lord, that we, Thy servants, may enjoy perpetual health of mind and body; and by the glorious intercession of the Blessed Virgin Mary, ever Virgin, may be delivered from present sorrow and attain to eternal joy.<br><br>
+Through Christ our Lord. Amen.
+</p>
 
 </div>
 
 <script>
-function toggleDetails(btn){btn.nextElementSibling.classList.toggle('open');}
+function toggleStation(btn){
+btn.nextElementSibling.classList.toggle("open");
+}
 </script>
 
 <div class="bottom-nav">
-<a href="index.html"><span>🏠</span>Home</a>
-<a href="churches.html"><span>⛪</span>Churches</a>
-<a href="prayers.html"><span>🙏</span>Prayers</a>
+<a href="index.html">🏠</a>
+<a href="churches.html">⛪</a>
+<a href="prayers.html">🙏</a>
+</div>
+
+</body>
+</html>
+
+</div>
+
+<script>
+function toggleStation(btn){
+btn.nextElementSibling.classList.toggle("open");
+}
+</script>
+
+<div class="bottom-nav">
+<a href="index.html">🏠</a>
+<a href="churches.html">⛪</a>
+<a href="prayers.html">🙏</a>
 </div>
 
 </body>
