@@ -1,160 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visita Iglesia 2026</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: #f7f3f8;
-      color: #2c2c2c;
-    }
-
-    header {
-      position: relative;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/crown.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 110px 20px;
-      overflow: hidden;
-      animation: zoomBg 18s ease-in-out infinite alternate;
-    }
-
-    @keyframes zoomBg {
-      from { background-size: 100%; }
-      to { background-size: 110%; }
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-      text-shadow: 0 0 8px rgba(255,215,0,0.6), 0 0 18px rgba(255,215,0,0.4);
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.95;
-      text-shadow: 0 0 6px rgba(0,0,0,0.6);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      padding: 15px;
-      background: #4b2c4d;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #e6d6eb;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      border-radius: 8px;
-      background: #7b4b7e;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #a8894f;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1 style="font-size:2.8rem; letter-spacing:2px;">𝐕𝐈𝐒𝐈𝐓𝐀 𝐈𝐆𝐋𝐄𝐒𝐈𝐀 𝟐𝟎𝟐𝟔</h1>
-    <p style="font-style:italic; font-size:1.2rem; margin-top:10px;">
-      "𝐴 𝑆𝑎𝑐𝑟𝑒𝑑 𝑃𝑖𝑙𝑔𝑟𝑖𝑚𝑎𝑔𝑒 𝑜𝑓 𝑃𝑟𝑎𝑦𝑒𝑟 𝑎𝑛𝑑 𝑅𝑒𝑓𝑙𝑒𝑐𝑡𝑖𝑜𝑛"
-    </p>
-    <p style="margin-top:15px; font-size:1.05rem;">
-      Let us walk in faith, deepen our devotion, and reflect through prayer
-    </p>
-    <p style="margin-top:10px; font-weight:bold;">
-      Date: March 29, 2026
-    </p>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="churches.html">Churches</a>
-    <a href="prayers.html">Prayers</a>
-    <a href="#guide">Guide</a>
-  </nav>
-
-  <div class="container">
-
-    <div class="card" id="about">
-      <h2>What is Visita Iglesia?</h2>
-      <p>
-        Visita Iglesia is a Catholic tradition observed during Holy Week, where the faithful visit at least seven churches to pray the Stations of the Cross.
-        It is a time for reflection, repentance, and deepening one's faith.
-      </p>
-    </div>
-
-    <div class="card" id="guide">
-      <h2>Your Journey</h2>
-      <p>
-        Follow our curated route of churches for Visita Iglesia 2026. Each stop includes prayers, reflections, and sacred spaces for quiet devotion.
-      </p>
-      <a class="btn" href="churches.html">Start Visiting Churches</a>
-    </div>
-
-    <div class="card">
-      <h2>Prayers & Stations</h2>
-      <p>
-        Access the complete Opening Prayer, the 14 Stations of the Cross, and the Closing Prayer for your pilgrimage.
-      </p>
-      <a class="btn" href="prayers.html">View Prayers</a>
-    </div>
-
+<header>
+  <h1>Visita Iglesia 2026</h1>
+  <div style="font-size:0.9rem; opacity:0.9;">
+    Pilgrimage Guide • Pray • Reflect • Complete the Journey
   </div>
 
-  <footer>
-    © 2026 Visita Iglesia | Built with devotion
-  </footer>
+  <!-- ✅ NEW NAV (connects to Page 1 + Prayers) -->
+  <div style="margin-top:12px;">
+    <a class="btn" href="index.html">🏠 Home</a>
+    <a class="btn" href="prayers.html">🙏 Prayers</a>
+  </div>
 
-</body>
-</html>
+  <!-- Existing Route Buttons -->
+  <div style="margin-top:10px;">
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Archdiocesan+Shrine+of+Jesus+the+Way+Pasay&destination=San+Isidro+Labrador+Pasay&waypoints=National+Shrine+of+Our+Mother+of+Perpetual+Help+Baclaran|Our+Lady+of+Sorrows+Pasay|Our+Lady+of+Remedies+Malate|Our+Lady+of+the+Assumption+Malate&travelmode=driving" target="_blank">🌅 AM Route (1–6)</a>
+
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=San+Isidro+Labrador+Pasay&destination=Nuestra+Señora+de+Gracia+Makati&waypoints=St+Joseph+the+Worker+Makati|Holy+Family+Parish+Makati|St+Alphonsus+Magallanes|St+John+Bosco+Makati|Saint+Andrew+Bel-Air|Sts+Peter+and+Paul+Makati|Our+Lady+of+the+Abandoned+Mandaluyong&travelmode=driving" target="_blank">🌇 PM Route (7–14)</a>
+  </div>
+
+  <!-- Timeline -->
+  <div style="font-size:0.8rem; margin-top:8px; opacity:0.9;">
+    Start 8:30 AM Mass at Church 1 • ~15–20 mins per church • Target finish by 3:00 PM
+  </div>
+
+  <div style="margin-top:10px;">
+    <button class="btn" onclick="startReminders()">🔔 Start Smart Reminders</button>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="themeBtn" onclick="toggleTheme()" 
+    style="position:absolute; right:15px; top:15px; padding:6px 10px; border:none; border-radius:8px; cursor:pointer;">
+    🌙
+  </button>
+</header>
+
+<footer style="text-align:center; padding:20px; color:#777;">
+  <a href="index.html" class="btn">⬅ Back to Home</a>
+  <p style="margin-top:10px;">© 2026 Visita Iglesia</p>
+</footer>
