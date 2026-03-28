@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<header>
+  <h1>Visita Iglesia 2026</h1>
+  <div style="font-size:0.9rem; opacity:0.9;">
+    Pilgrimage Guide • Pray • Reflect • Complete the Journey
+  </div>
+
+  <!-- ✅ NEW NAV (connects to Page 1 + Prayers) -->
+  <div style="margin-top:12px;">
+    <a class="btn" href="index.html">🏠 Home</a>
+    <a class="btn" href="prayers.html">🙏 Prayers</a>
+  </div>
+
+  <!-- Existing Route Buttons -->
+  <div style="margin-top:10px;">
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=Archdiocesan+Shrine+of+Jesus+the+Way+Pasay&destination=San+Isidro+Labrador+Pasay&waypoints=National+Shrine+of+Our+Mother+of+Perpetual+Help+Baclaran|Our+Lady+of+Sorrows+Pasay|Our+Lady+of+Remedies+Malate|Our+Lady+of+the+Assumption+Malate&travelmode=driving" target="_blank">🌅 AM Route (1–6)</a>
+
+    <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=San+Isidro+Labrador+Pasay&destination=Nuestra+Señora+de+Gracia+Makati&waypoints=St+Joseph+the+Worker+Makati|Holy+Family+Parish+Makati|St+Alphonsus+Magallanes|St+John+Bosco+Makati|Saint+Andrew+Bel-Air|Sts+Peter+and+Paul+Makati|Our+Lady+of+the+Abandoned+Mandaluyong&travelmode=driving" target="_blank">🌇 PM Route (7–14)</a>
+  </div>
+
+  <!-- Timeline -->
+  <div style="font-size:0.8rem; margin-top:8px; opacity:0.9;">
+    Start 8:30 AM Mass at Church 1 • ~15–20 mins per church • Target finish by 3:00 PM
+  </div>
+
+  <div style="margin-top:10px;">
+    <button class="btn" onclick="startReminders()">🔔 Start Smart Reminders</button>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="themeBtn" onclick="toggleTheme()" 
+    style="position:absolute; right:15px; top:15px; padding:6px 10px; border:none; border-radius:8px; cursor:pointer;">
+    🌙
+  </button>
+</header>>
   <link rel="manifest" href="manifest.json">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -607,3 +640,9 @@ function startReminders() {
 
 </body>
 </html>
+
+
+<footer style="text-align:center; padding:20px; color:#777;">
+  <a href="index.html" class="btn">⬅ Back to Home</a>
+  <p style="margin-top:10px;">© 2026 Visita Iglesia</p>
+</footer>
