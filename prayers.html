@@ -3,390 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prayers | Visita Iglesia 2026</title>
+<title>Churches | Visita Iglesia 2026</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: #f7f3f8;
-  color: #2c2c2c;
-  line-height: 1.8;
-}
-header {
-  background: #4b2c4d;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 20px;
-}
-.section {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.station {
-  margin-bottom: 22px;
-}
-.station-title {
-  font-weight: bold;
-  color: #4b2c4d;
-  margin-bottom: 6px;
-}
-.response {
-  font-style: italic;
-}
-  .expand-btn {
-    margin-top:8px;
-    background:#7b4b7e;
-    color:white;
-    border:none;
-    padding:6px 10px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:0.8rem;
-  }
-  .expand-content {
-    display:none;
-    margin-top:10px;
-    font-size:0.9rem;
-    background:#f3eef6;
-    padding:10px;
-    border-radius:8px;
-  }
-  .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #4b2c4d;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-  }
-  .bottom-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.85rem;
-    text-align: center;
-  }
-  .bottom-nav a span {
-    display: block;
-    font-size: 1.2rem;
-  }
-  body { padding-bottom: 70px; }
+:root{--primary:#7b4b7e;--accent:#d8a7ff;--card:rgba(35,16,41,0.75);} 
+body{margin:0;font-family:Georgia,serif;background:linear-gradient(rgba(20,10,26,0.75), rgba(46,22,51,0.9)),url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;color:white;} 
+header{text-align:center;padding:50px 20px 40px;background:linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;} 
+.container{max-width:900px;margin:auto;padding:20px;} 
+.card{background:var(--card);backdrop-filter:blur(10px);border-radius:18px;margin-bottom:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.6);} 
+.card img{width:100%;height:230px;object-fit:cover;} 
+.content{padding:18px;} h3{margin:0 0 10px;} 
+.toggle-btn{background:var(--primary);border:none;color:white;padding:10px 14px;border-radius:10px;cursor:pointer;} 
+.details{max-height:0;overflow:hidden;transition:0.4s;opacity:0;} 
+.details.open{max-height:800px;opacity:1;margin-top:12px;} 
+.section-title{color:var(--accent);margin-top:10px;font-size:0.85rem;} 
+.small{font-size:0.85rem;opacity:0.9;} 
+.bottom-nav{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:rgba(35,16,41,0.9);padding:10px 0;} 
+.bottom-nav a{color:white;text-decoration:none;font-size:0.75rem;text-align:center;} body{padding-bottom:70px;}
 </style>
 </head>
 <body>
-
-<header>
-<h1>Complete Prayers & Stations of the Cross</h1>
-<div style="margin-top:10px;">
-  <a href="churches.html" style="background:white;color:#4b2c4d;padding:8px 14px;border-radius:8px;text-decoration:none;font-size:0.9rem;">← Back to Churches</a>
-</div>
-</header>
+<header><h1>Visita Iglesia 2026</h1><p>Tap “View Details”</p></header>
 
 <div class="container">
 
-<div class="section">
-<h2>Opening Prayer</h2>
-<p>
-In the name of the Father, and of the Son, and of the Holy Spirit. Amen.<br><br>
-My Lord, Jesus Christ, You have made this journey to die for me with love unutterable,
-and I have so many times ungratefully abandoned You. But now I love You with all my heart,
-and because I love You, I am sincerely sorry for ever having offended You.
-Pardon me, my God, and permit me to accompany You on this journey.
-You go to die for love of me; I want, my beloved Redeemer, to die for love of You.
-My Jesus, I will live and die always united to You. Amen.
-</p>
-</div>
-
-<div class="section">
-<h2>Stations of the Cross (Traditional - St. Alphonsus Liguori)</h2>
+<!-- LOOP OF 14 CHURCHES -->
 
 <!-- 1 -->
-<div class="station" id="station1">
-<div class="station-title">1st Station: Jesus is condemned to death</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how Jesus Christ, after being scourged and crowned with thorns, was unjustly condemned by Pilate to die on the Cross. This sentence filled Him with joy, because it was the hour in which He was to die for the salvation of mankind.</p>
-<p><b>Prayer:</b> My adorable Jesus, it was not Pilate; no, it was my sins that condemned You to die. I beseech You, by the merits of this sorrowful journey, to assist my soul in its journey toward eternity. I love You, my beloved Jesus; I love You more than myself. I repent with my whole heart of having offended You. Never permit me to separate myself from You again.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Archdiocesan_Shrine_of_Jesus_the_Way_the_Truth_and_the_Life.jpg"><div class="content"><h3>1. Archdiocesan Shrine of Jesus the Way, the Truth, and the Life</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Coral Way, Pasay City</div>
+<div class="section-title">⛪ Mass (Mar 29)</div><div class="small">8:30 AM (Start here), 10:00 AM</div>
+<div class="section-title">📖 History</div><div class="small">A modern diocesan shrine serving the Bay Area community, known for large gatherings and accessibility.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Baclaran: 10 mins (₱80–120 Grab), jeep + MOA routes, parking available</div>
+<div class="section-title">🍽 Nearby</div><div class="small">SM Mall of Asia, Starbucks, Jollibee, CBTL, Vikings, 7-Eleven</div>
+</div></div></div>
 
 <!-- 2 -->
-<div class="station" id="station2">
-<div class="station-title">2nd Station: Jesus carries His Cross</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how Jesus, in making this journey with the Cross on His shoulders, thought of us and offered to His Father the death He was about to suffer.</p>
-<p><b>Prayer:</b> My most beloved Jesus, I embrace all the sufferings You have destined for me until death. I beg You, by all You suffered in carrying Your Cross, to give me the help necessary to carry mine with perfect patience and resignation.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Baclaran_Church_2023.jpg"><div class="content"><h3>2. National Shrine of Our Mother of Perpetual Help</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Redemptorist Rd, Baclaran, Parañaque</div>
+<div class="section-title">⛪ Mass</div><div class="small">6AM, 8AM, 10AM, 12NN, 4PM, 6PM</div>
+<div class="section-title">📖 History</div><div class="small">Established in 1948, Baclaran Church is among the most visited Marian shrines in Asia.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Our Lady of Sorrows: 8 mins (₱70–100), jeep + LRT nearby</div>
+<div class="section-title">🍽 Nearby</div><div class="small">McDo, Mang Inasal, Jollibee, Baclaran Market, Dunkin, 7-Eleven</div>
+</div></div></div>
 
 <!-- 3 -->
-<div class="station" id="station3">
-<div class="station-title">3rd Station: Jesus falls the first time</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider this first fall of Jesus under His Cross. His flesh was torn by scourges, His head crowned with thorns, and He had lost a great quantity of blood. He was so weakened that He could scarcely walk.</p>
-<p><b>Prayer:</b> My beloved Jesus, it was not the weight of the Cross, but of my sins, which made You suffer so much. By the merits of this first fall, deliver me from the misfortune of falling into mortal sin.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Our_Lady_of_Sorrows_Parish_Pasay.jpg"><div class="content"><h3>3. Our Lady of Sorrows Parish</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">F.B. Harrison St, Pasay City</div>
+<div class="section-title">⛪ Mass</div><div class="small">7AM, 9AM, 5PM</div>
+<div class="section-title">📖 History</div><div class="small">A long-standing parish serving Pasay residents with a strong Marian devotion.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Malate Church: 10 mins (₱90–120)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Savemore, Chowking, Jollibee, Andok’s, 7-Eleven, local cafés</div>
+</div></div></div>
 
 <!-- 4 -->
-<div class="station" id="station4">
-<div class="station-title">4th Station: Jesus meets His Mother</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider the meeting of the Son and the Mother, which took place on this journey. Jesus and Mary looked at each other, and their looks became as so many arrows to wound those hearts which loved each other so tenderly.</p>
-<p><b>Prayer:</b> My most loving Jesus, by the pain You suffered in this meeting, grant me the grace to be truly devoted to Your most holy Mother.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Malate_Church_Manila.jpg"><div class="content"><h3>4. Our Lady of Remedies Parish (Malate Church)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Del Pilar St, Malate, Manila</div>
+<div class="section-title">⛪ Mass</div><div class="small">8AM, 10AM, 6PM</div>
+<div class="section-title">📖 History</div><div class="small">A historic Baroque church dating back to Spanish era, rebuilt after WWII.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Assumption Parish: 5 mins (₱60–80)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Cafe Adriatico, Starbucks, Robinsons Place Manila, McDo, 7-Eleven, Aristocrat</div>
+</div></div></div>
 
 <!-- 5 -->
-<div class="station" id="station5">
-<div class="station-title">5th Station: Simon helps Jesus carry the Cross</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how the Jews, seeing that Jesus was unable to proceed, forced Simon of Cyrene to carry the Cross behind Our Lord.</p>
-<p><b>Prayer:</b> My sweetest Jesus, I will not refuse the Cross as Simon did: I accept it, I embrace it. I accept in particular the death that is destined for me.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Our_Lady_of_the_Assumption_Church_Manila.jpg"><div class="content"><h3>5. Our Lady of the Assumption Parish</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Leveriza St, Malate, Manila</div>
+<div class="section-title">⛪ Mass</div><div class="small">7AM, 9AM</div>
+<div class="section-title">📖 History</div><div class="small">A quieter parish in Malate known for community devotion.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ San Isidro Labrador: 10 mins</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Local eateries, 7-Eleven, cafés, small bakeries</div>
+</div></div></div>
 
 <!-- 6 -->
-<div class="station" id="station6">
-<div class="station-title">6th Station: Veronica wipes the face of Jesus</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how Veronica, seeing Jesus so afflicted, wiped His face with a cloth, on which was afterwards left the impression of His sacred countenance.</p>
-<p><b>Prayer:</b> My most beloved Jesus, Your face was beautiful before, but in this journey it has lost all its beauty. I offer You my heart; imprint on it Your divine likeness.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/San_Isidro_Labrador_Parish_Pasay.jpg"><div class="content"><h3>6. San Isidro Labrador Parish</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Taft Ave, Pasay City</div>
+<div class="section-title">⛪ Mass</div><div class="small">6AM, 8AM</div>
+<div class="section-title">📖 History</div><div class="small">A parish along Taft serving commuters and locals.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ St Joseph Makati: 15 mins (₱120–150)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">McDo, KFC, Chowking, LRT Taft area, 7-Eleven</div>
+</div></div></div>
 
 <!-- 7 -->
-<div class="station" id="station7">
-<div class="station-title">7th Station: Jesus falls the second time</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider the second fall of Jesus under the Cross, which renews the pain of all the wounds of the head and members of Our afflicted Lord.</p>
-<p><b>Prayer:</b> My most gentle Jesus, how many times have I offended You! By the merits of this new fall, give me the necessary help to persevere in Your grace.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/St_Joseph_the_Worker_Parish_Makati.jpg"><div class="content"><h3>7. St. Joseph the Worker Parish (Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Enrique St, Pio del Pilar, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 9:00 AM, 5:30 PM</div>
+<div class="section-title">📖 History</div><div class="small">A central Makati parish serving residential and business districts.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Holy Family: 6 mins (₱60–90), trike/jeep/Grab</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Little Tokyo, KFC, Jollibee, 7-Eleven, WalterMart Makati, cafés</div>
+</div></div></div>
 
 <!-- 8 -->
-<div class="station" id="station8">
-<div class="station-title">8th Station: Jesus meets the women of Jerusalem</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how these women wept with compassion at seeing Jesus so badly treated. But Jesus said to them: "Weep not for Me, but for yourselves and for your children."</p>
-<p><b>Prayer:</b> My Jesus, laden with sorrows, I weep for the offences I have committed against You. Grant that I may weep for them with a sincere and lasting sorrow.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Holy_Family_Parish_Makati.jpg"><div class="content"><h3>8. Holy Family Parish (San Isidro, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Faraday St, San Isidro, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">6:30 AM, 8:00 AM, 5:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">Community parish known for family-centered ministries.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ St. Alphonsus (Magallanes): 8 mins (₱80–120)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Carinderias, Jollibee, Chowking, 7-Eleven, local cafés, bakeries</div>
+</div></div></div>
 
 <!-- 9 -->
-<div class="station" id="station9">
-<div class="station-title">9th Station: Jesus falls the third time</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider the third fall of Jesus Christ. His weakness was extreme and the cruelty of His executioners excessive.</p>
-<p><b>Prayer:</b> My outraged Jesus, by the weakness You suffered in going to Calvary, give me strength enough to conquer all human respect.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/St_Alphonsus_Mary_de_Liguori_Church_Magallanes.jpg"><div class="content"><h3>9. St. Alphonsus Mary de Liguori Parish (Magallanes)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Magallanes Village, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 12:00 NN, 6:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">A serene chapel complex serving nearby villages and offices.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Don Bosco: 7 mins (₱70–100)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Magallanes Square, Starbucks, McDo, KFC, 7-Eleven, cafés</div>
+</div></div></div>
 
 <!-- 10 -->
-<div class="station" id="station10">
-<div class="station-title">10th Station: Jesus is stripped of His garments</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how Jesus was violently stripped of His clothes, which adhered to His torn flesh.</p>
-<p><b>Prayer:</b> My innocent Jesus, by the torment You suffered in being stripped of Your garments, help me to strip myself of all attachment to earthly things.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/St_John_Bosco_Parish_Makati.jpg"><div class="content"><h3>10. St. John Bosco Parish (Don Bosco, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Arnaiz Ave cor. Amorsolo St, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">7:30 AM, 10:00 AM, 6:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">A popular parish near CBD, known for youth and Salesian community.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ St. Andrew: 10 mins (₱90–120)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Greenbelt, Glorietta, McDo, Jollibee, Starbucks, 7-Eleven</div>
+</div></div></div>
 
 <!-- 11 -->
-<div class="station" id="station11">
-<div class="station-title">11th Station: Jesus is nailed to the Cross</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how Jesus, after being thrown on the Cross, extended His hands and offered to His Eternal Father the sacrifice of His life.</p>
-<p><b>Prayer:</b> My Jesus, loaded with contempt, nail my heart to the Cross, that it may always remain there to love You.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Saint_Andrew_the_Apostle_Parish_Makati.jpg"><div class="content"><h3>11. Saint Andrew the Apostle Parish (Bel-Air, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Constellation St cor. Nicanor Garcia, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">8:00 AM, 10:00 AM, 6:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">Modern parish serving Bel-Air and nearby communities.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Sts. Peter & Paul: 8 mins (₱80–110)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Salcedo area cafés, Starbucks, McDo, 7-Eleven, restaurants</div>
+</div></div></div>
 
 <!-- 12 -->
-<div class="station" id="station12">
-<div class="station-title">12th Station: Jesus dies on the Cross</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how Jesus, after three hours of agony on the Cross, at length consumed with suffering, abandoned Himself into the hands of His Father and expired.</p>
-<p><b>Prayer:</b> My dying Jesus, I devoutly kiss the Cross on which You died for love of me. I deserve, because of my sins, to die a miserable death; but Your death is my hope.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Sts_Peter_and_Paul_Parish_Makati.jpg"><div class="content"><h3>12. Saints Peter and Paul Parish (Poblacion, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">D.M. Rivera St, Poblacion, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 9:00 AM, 5:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">One of Makati’s oldest parishes with strong community roots.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Our Lady of the Abandoned: 10 mins (₱90–120)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Poblacion restos, cafes, convenience stores, eateries</div>
+</div></div></div>
 
 <!-- 13 -->
-<div class="station" id="station13">
-<div class="station-title">13th Station: Jesus is taken down from the Cross</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how, after Our Lord had expired, two of His disciples took Him down from the Cross and placed Him in the arms of His afflicted Mother.</p>
-<p><b>Prayer:</b> O Mother of Sorrows, for the love of your Son, accept me as your servant and pray to Him for me.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Our_Lady_of_the_Abandoned_Mandaluyong.jpg"><div class="content"><h3>13. Parish of Our Lady of the Abandoned (Mandaluyong)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Hulo, Mandaluyong City</div>
+<div class="section-title">⛪ Mass</div><div class="small">6:30 AM, 8:00 AM, 5:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">A well-known Marian parish with deep local devotion.</div>
+<div class="section-title">🚗 Travel</div><div class="small">→ Nuestra Señora de Gracia: 12 mins (₱100–130)</div>
+<div class="section-title">🍽 Nearby</div><div class="small">SM Light Mall, Jollibee, McDo, 7-Eleven, cafes, eateries</div>
+</div></div></div>
 
 <!-- 14 -->
-<div class="station" id="station14">
-<div class="station-title">14th Station: Jesus is laid in the tomb</div>
-<p class="response">We adore You, O Christ, and we bless You. Because by Your holy Cross, You have redeemed the world.</p>
-<p>Consider how the disciples carried the body of Jesus to the tomb and placed it therein.</p>
-<p><b>Prayer:</b> My buried Jesus, I kiss the stone that encloses You. But You gloriously rose again; I beg You to grant me the grace to rise again with You in glory.</p>
-<p class="response">(Our Father, Hail Mary, Glory Be.)
-<button class="expand-btn" onclick="togglePrayer(this)">View Full Prayers</button>
-<div class="expand-content">
-<b>Our Father</b><br>
-Our Father, who art in heaven, hallowed be Thy name; Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.<br><br>
-<b>Hail Mary</b><br>
-Hail Mary, full of grace, the Lord is with thee; blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.<br><br>
-<b>Glory Be</b><br>
-Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.
-</div></p>
-</div>
-
-</div>
-
-<div class="section">
-<h2>Closing Prayer</h2>
-<p>
-Lord Jesus Christ, Your Passion and death have brought life to the world.
-May we always remember Your sacrifice and live in Your love.
-Help us to carry our crosses faithfully and follow You always. Amen.
-</p>
-</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Nuestra_Senora_de_Gracia_Church_Makati.jpg"><div class="content"><h3>14. Nuestra Señora de Gracia Parish (Guadalupe Viejo, Makati)</h3><button class="toggle-btn" onclick="toggleDetails(this)">View Details</button><div class="details">
+<div class="section-title">📍 Address</div><div class="small">Bernardino St, Guadalupe Viejo, Makati</div>
+<div class="section-title">⛪ Mass</div><div class="small">7:00 AM, 9:00 AM, 6:00 PM</div>
+<div class="section-title">📖 History</div><div class="small">A historic Spanish-era church founded in the 1600s, one of Makati’s oldest landmarks.</div>
+<div class="section-title">🚗 Travel</div><div class="small">Final stop</div>
+<div class="section-title">🍽 Nearby</div><div class="small">Guadalupe Mall, Jollibee, McDo, street food, 7-Eleven, cafes</div>
+</div></div></div>
 
 </div>
 
 <script>
-function togglePrayer(btn) {
-  const content = btn.nextElementSibling;
-  content.style.display = content.style.display === 'block' ? 'none' : 'block';
-}
+function toggleDetails(btn){btn.nextElementSibling.classList.toggle('open');}
 </script>
-<!-- Bottom Navigation -->
+
 <div class="bottom-nav">
-  <a href="index.html"><span>🏠</span>Home</a>
-  <a href="churches.html"><span>⛪</span>Churches</a>
-  <a href="prayers.html"><span>🙏</span>Prayers</a>
+<a href="index.html"><span>🏠</span>Home</a>
+<a href="churches.html"><span>⛪</span>Churches</a>
+<a href="prayers.html"><span>🙏</span>Prayers</a>
 </div>
 
 </body>
